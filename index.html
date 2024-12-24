@@ -1,0 +1,236 @@
+<!-- rágô -->
+<html>
+    <head>
+        <title>Rágô - Web Page</title>
+
+        <!-- Meta -->
+        <meta name="title" content="Rago - Web Page">
+        <meta name="description" content=":)">
+        <meta name="robots" content="index,follow">
+        <meta name="author" content="Rago">
+        <meta name="theme-color" content="#ff0000">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Link -->
+        <link rel="stylesheet" href="css/rago.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://i.hizliresim.com/f6w7u4i.png">
+        <link rel="stylesheet" href="assets/css/jquery.rprogessbar.min.css">
+
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+        <script src='https://raw.githack.com/mburakerman/prognroll/master/src/prognroll.min.js'></script>
+        <script src="https://kit.fontawesome.com/fe5b439e83.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/jQuery.rProgressbar.min.js"></script>
+    </head>
+    <body>
+        <!-- İlerleme Barı -->
+        <div id="ilerleme-bari">
+            <div id="bar"></div>
+        </div>
+        <!-- /İlerleme Barı -->
+
+        <!-- Menu Başlar -->
+        <div class="menu">
+            <div class="menubox">
+                <div>
+                    <a href="index.html"><h1>Rago Code</h1></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-moon" onclick="darkmode_rago()" id="moon"></i>
+                    <i class="fa-solid fa-sun" onclick="darkmode_rago()" id="sun"></i>
+                    <i class="fa-solid fa-bars" onclick="menuac()" id="ac"></i>
+                    <i class="bi bi-x-lg" onclick="menukapa()" id="kapat"></i>
+                </div>
+            </div>
+        </div>
+        <!-- /Menu Biter -->
+
+        <!-- Mobil Menu Başlar -->
+        <div id="mobile-menu">
+            <div class="menubox">
+                <div>
+                    <br/><br/><br/><br/><br/><br/><h1>Menu</h1>
+                </div>
+                <div>
+                    <a href="discord.com/users/824626594224013322">Blog</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Mobil Menu Biter -->
+
+        <!-- Banner Başlar -->
+        <div class="banner">
+            <img src="https://i.hizliresim.com/f6w7u4i.png">
+        </div>
+        <!-- /Banner Biter -->
+
+        <!-- Sözler Box Başlar -->
+        <div class="sozler">
+            <h1>SÖZLER</h1>
+            <div class="sozlerbox">
+                <div>
+                    <img src="assets/img/thumb-1920-218512.jpg">
+                    <span class="soz-desc">
+                        <h1>Random Sözler</h1>
+                        <a href="./assets/pages/random-sozler.html">Tıkla</a>
+                    </span>
+                </div>
+                <div>
+                    <img src="assets/img/446e50b239858de4730d00a0fe074347.jpg">
+                    <span class="soz-desc">
+                        <h1>Yazılım Sözler</h1>
+                        <a href="./assets/pages/yazilim-sozler.html">Tıkla</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- /Sözler Box Biter -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerbox">
+                <div>
+                    <h1>Rago</h1>
+                    <p>İnsanlara Yazılımın Ne Kadar Değerli Bir Element Olduğunu Göstermeye Çalışıyoruz.</p>
+                </div>
+                <div>
+                    <h1>Sosyal Medya</h1>
+                    <a href="https://instagram.com/yusuff0004"><i class="fa-brands fa-instagram"></i></a>
+                  
+                </div>
+            </div><div style="clear:both"></div>
+            <span>Tüm Hakları Saklıdır &copy; ~ 2017 & 2024. Coded By &heartsuit; Rago</span>
+        </div>
+        <!-- /Footer -->
+
+        <!-- Bildirim Çubuğu Başlar -->
+        <div class="bildirimbox">
+            <i class="bi bi-x-lg" title="kapat" onclick="bildirimkapat()"></i><br/>
+            <p>Discord Profilime Gitmek İçin Aşağıda ki Butona Tıklayın.</p>
+            <a href="discord.com/users/824626594224013322">Discord</a>
+        </div>
+        <!-- /Bildirim Çubuğu Biter -->
+
+        <!-- Scriptler Başlar -->
+        <script>
+            // Rágô
+            var image = document.getElementsByClassName('ragocodeimage');
+            new simpleParallax(image);
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $(window).fadeIn(function(){
+                    setTimeout(() => {
+                        $('.bildirimbox').css({
+                          "transform": "scale(1)"
+                        })
+                    }, 2000)
+                })
+            })
+
+            function bildirimkapat(){
+                $('.bildirimbox').css({
+                    "transform": "scale(0)",
+                    "opacity": "0"
+                })
+            }
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 100){
+                        $('.menu').css({
+                            "padding": "10px",
+                            "box-shadow": "0px 5px 20px 0px rgba(0, 0, 0, .2)"
+                        })
+                    } else{
+                        $('.menu').css({
+                            "padding": "20px",
+                            "box-shadow": "initial"
+                        })
+                    }
+                })
+            })
+        </script>
+
+        <script>
+            $(function() {
+                $("body").prognroll({
+                    height: 5,
+                    color: "#ff0000", // progress bar background color
+                    custom: true // if you make it true, you can add your custom div and see it&#39;s scroll progress on the page
+                });
+            });
+        </script>
+
+        <script>
+            $('#kapat').css({
+                "display": "none"
+            })
+            function menuac() {
+                $('#mobile-menu').css({
+                    "display": "initial"
+                })
+                $('.menu').css({
+                    "box-shadow": "initial"
+                })
+                $('#ac').css({
+                    "display": "none"
+                })
+                $('#kapat').css({
+                    "display": "initial"
+                })
+            }
+
+            function menukapa() {
+                $('#mobile-menu').css({
+                    "display": "none"
+                })
+                $('.menu').css({
+                    "box-shadow": "0px 5px 20px 0px rgba(0, 0, 0, .2)"
+                })
+                $('#kapat').css({
+                    "display": "none"
+                })
+                $('#ac').css({
+                    "display": "initial"
+                })
+            }
+        </script>
+
+        <script>
+            $('#sun').css({
+                "display": "none"
+            })
+            function darkmode_rago(){
+                var rago = document.body;
+                rago.classList.toggle('darkmode')
+
+                $('#moon').css({
+                    "display": "none"
+                })
+                $('#sun').css({
+                    "display": "initial"
+                })
+            }
+            function darkmode_rago2(){
+                var rago = document.body;
+                rago.classList.toggle('darkmode')
+
+                $('#moon').css({
+                    "display": "initial"
+                })
+                $('#sun').css({
+                    "display": "none"
+                })
+            }
+        </script>
+        <!-- /Scriptler Biter -->
+    </body>
+</html>
